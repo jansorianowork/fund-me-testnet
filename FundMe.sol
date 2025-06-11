@@ -22,8 +22,8 @@ contract FundMe {
         i_owner = msg.sender;
     }
 
-    function fund() public payable {
-        // number of wey
+    function    fund() public payable {
+        // number of wei
         require(msg.value.getConversionRate() > MINIMUM_USD, "not enough ETH");
         //revert - undo any actions that have been done, and send remaining gas back
         funders.push(msg.sender);
